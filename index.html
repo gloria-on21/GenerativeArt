@@ -1,16 +1,168 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script defer src="./build/bundle.js"></script>
-</head>
-
+<html>
+<head> <link rel="stylesheet" href="app.css">
+  <h1>Generative Art Maker</h1></head>
 <body>
-    <my-beispiel></my-beispiel>
-    <input type="text" id="myInput" />
+    
+  <div id="einstellungen" > 
+    <div id="dropdown-background">
+        <p> Wähle deine Hintergrundfarbe:</p>
+        <div class="custom-select" style="width:200px;">
+            <select id="hintergrundsfarbe">
+              <option class="drop-down-hintergrund" value="#FFF200">yellow</option>
+              <option class="drop-down-hintergrund" value="#FCF4A3">banana</option>
+              <option class="drop-down-hintergrund" value="#FFE5B4">peach</option>
+              <option class="drop-down-hintergrund" value="#FC6600">orange</option>
+              <option class="drop-down-hintergrund" value="#D30000">red</option>
+              <option class="drop-down-hintergrund" value="#5E1914">sangria</option>
+              <option class="drop-down-hintergrund" value="#FC0FC0">pink</option>
+              <option class="drop-down-hintergrund" value="#FF66CC">rose pink</option>
+              <option class="drop-down-hintergrund" value="#E4A0F7">lavender</option>
+              <option class="drop-down-hintergrund" value="#0018F9">blue</option>
+              <option class="drop-down-hintergrund" value="#95C8D8">sky</option>
+              <option class="drop-down-hintergrund" value="#000080">navy</option>
+              <option class="drop-down-hintergrund" value="#3BB143">green</option>
+              <option class="drop-down-hintergrund" value="#98FB98">mint</option>
+              <option class="drop-down-hintergrund" value="white">white</option>
+              <option class="drop-down-hintergrund" value="black">black</option>
+            </select>
+          </div>
+
+          <div id="dropdown-color1">
+            <p> Wähle bis zu fünf Farben aus</p>
+            <div class="custom-select" style="width:200px;">
+                <select id="farbe1">
+                  <option class="drop-down-hintergrund" value="#FFF200">yellow</option>
+                  <option class="drop-down-hintergrund" value="#FCF4A3">banana</option>
+                  <option class="drop-down-hintergrund" value="#FFE5B4">peach</option>
+                  <option class="drop-down-hintergrund" value="#FC6600">orange</option>
+                  <option class="drop-down-hintergrund" value="#D30000">red</option>
+                  <option class="drop-down-hintergrund" value="#5E1914">sangria</option>
+                  <option class="drop-down-hintergrund" value="#FC0FC0">pink</option>
+                  <option class="drop-down-hintergrund" value="#FF66CC">rose pink</option>
+                  <option class="drop-down-hintergrund" value="#E4A0F7">lavender</option>
+                  <option class="drop-down-hintergrund" value="#0018F9">blue</option>
+                  <option class="drop-down-hintergrund" value="#95C8D8">sky</option>
+                  <option class="drop-down-hintergrund" value="#000080">navy</option>
+                  <option class="drop-down-hintergrund" value="#3BB143">green</option>
+                  <option class="drop-down-hintergrund" value="#98FB98">mint</option>
+                  <option class="drop-down-hintergrund" value="white">white</option>
+                  <option class="drop-down-hintergrund" value="black">black</option>
+                </select>
+              </div>
+
+              <div id="dropdown-color2">
+                <p> 2. Farbe</p>
+                <div class="custom-select" style="width:200px;">
+                    <select id="farbe2">
+                      <option class="drop-down-hintergrund" value="#FFF200">yellow</option>
+                      <option class="drop-down-hintergrund" value="#FCF4A3">banana</option>
+                      <option class="drop-down-hintergrund" value="#FFE5B4">peach</option>
+                      <option class="drop-down-hintergrund" value="#FC6600">orange</option>
+                      <option class="drop-down-hintergrund" value="#D30000">red</option>
+                      <option class="drop-down-hintergrund" value="#5E1914">sangria</option>
+                      <option class="drop-down-hintergrund" value="#FC0FC0">pink</option>
+                      <option class="drop-down-hintergrund" value="#FF66CC">rose pink</option>
+                      <option class="drop-down-hintergrund" value="#E4A0F7">lavender</option>
+                      <option class="drop-down-hintergrund" value="#0018F9">blue</option>
+                      <option class="drop-down-hintergrund" value="#95C8D8">sky</option>
+                      <option class="drop-down-hintergrund" value="#000080">navy</option>
+                      <option class="drop-down-hintergrund" value="#3BB143">green</option>
+                      <option class="drop-down-hintergrund" value="#98FB98">mint</option>
+                      <option class="drop-down-hintergrund" value="white">white</option>
+                      <option class="drop-down-hintergrund" value="black">black</option>                    </select>
+                  </div>
+
+                  <div id="dropdown-color3">
+                    <p> 3. Farbe</p>
+                    <div class="custom-select" style="width:200px;">
+                        <select id="farbe3">
+                          <option class="drop-down-hintergrund" value="#FFF200">yellow</option>
+                          <option class="drop-down-hintergrund" value="#FCF4A3">banana</option>
+                          <option class="drop-down-hintergrund" value="#FFE5B4">peach</option>
+                          <option class="drop-down-hintergrund" value="#FC6600">orange</option>
+                          <option class="drop-down-hintergrund" value="#D30000">red</option>
+                          <option class="drop-down-hintergrund" value="#5E1914">sangria</option>
+                          <option class="drop-down-hintergrund" value="#FC0FC0">pink</option>
+                          <option class="drop-down-hintergrund" value="#FF66CC">rose pink</option>
+                          <option class="drop-down-hintergrund" value="#E4A0F7">lavender</option>
+                          <option class="drop-down-hintergrund" value="#0018F9">blue</option>
+                          <option class="drop-down-hintergrund" value="#95C8D8">sky</option>
+                          <option class="drop-down-hintergrund" value="#000080">navy</option>
+                          <option class="drop-down-hintergrund" value="#3BB143">green</option>
+                          <option class="drop-down-hintergrund" value="#98FB98">mint</option>
+                          <option class="drop-down-hintergrund" value="white">white</option>
+                          <option class="drop-down-hintergrund" value="black">black</option>                        </select>
+                      </div>
+
+                      <div id="dropdown-color4">
+                        <p> 4. Farbe</p>
+                        <div class="custom-select" style="width:200px;">
+                            <select id="farbe4">
+                              <option class="drop-down-hintergrund" value="#FFF200">yellow</option>
+                              <option class="drop-down-hintergrund" value="#FCF4A3">banana</option>
+                              <option class="drop-down-hintergrund" value="#FFE5B4">peach</option>
+                              <option class="drop-down-hintergrund" value="#FC6600">orange</option>
+                              <option class="drop-down-hintergrund" value="#D30000">red</option>
+                              <option class="drop-down-hintergrund" value="#5E1914">sangria</option>
+                              <option class="drop-down-hintergrund" value="#FC0FC0">pink</option>
+                              <option class="drop-down-hintergrund" value="#FF66CC">rose pink</option>
+                              <option class="drop-down-hintergrund" value="#E4A0F7">lavender</option>
+                              <option class="drop-down-hintergrund" value="#0018F9">blue</option>
+                              <option class="drop-down-hintergrund" value="#95C8D8">sky</option>
+                              <option class="drop-down-hintergrund" value="#000080">navy</option>
+                              <option class="drop-down-hintergrund" value="#3BB143">green</option>
+                              <option class="drop-down-hintergrund" value="#98FB98">mint</option>
+                              <option class="drop-down-hintergrund" value="white">white</option>
+                              <option class="drop-down-hintergrund" value="black">black</option>                            </select>
+                          </div>
+                          <div id="dropdown-color5">
+                            <p> 5. Farbe</p>
+                            <div class="custom-select" style="width:200px;">
+                                <select id="farbe5">
+                                  <option class="drop-down-hintergrund" value="#FFF200">yellow</option>
+                                  <option class="drop-down-hintergrund" value="#FCF4A3">banana</option>
+                                  <option class="drop-down-hintergrund" value="#FFE5B4">peach</option>
+                                  <option class="drop-down-hintergrund" value="#FC6600">orange</option>
+                                  <option class="drop-down-hintergrund" value="#D30000">red</option>
+                                  <option class="drop-down-hintergrund" value="#5E1914">sangria</option>
+                                  <option class="drop-down-hintergrund" value="#FC0FC0">pink</option>
+                                  <option class="drop-down-hintergrund" value="#FF66CC">rose pink</option>
+                                  <option class="drop-down-hintergrund" value="#E4A0F7">lavender</option>
+                                  <option class="drop-down-hintergrund" value="#0018F9">blue</option>
+                                  <option class="drop-down-hintergrund" value="#95C8D8">sky</option>
+                                  <option class="drop-down-hintergrund" value="#000080">navy</option>
+                                  <option class="drop-down-hintergrund" value="#3BB143">green</option>
+                                  <option class="drop-down-hintergrund" value="#98FB98">mint</option>
+                                  <option class="drop-down-hintergrund" value="white">white</option>
+                                  <option class="drop-down-hintergrund" value="black">black</option>
+                                </select>
+                              </div>
+
+                              <p> Wähle ein Muster aus!</p>
+                                <div class="custom-select" style="width:200px;">
+                                  <select id="muster">
+                                    <option class="drop-down-hintergrund" value="linienOhneHintergrund">Linien ohne Hintergrund</option>
+                                    <option class="drop-down-hintergrund" value="kreise">Kreise</option>
+                                    <option class="drop-down-hintergrund" value="linien">Linien</option>
+
+                                  </select>
+                                </div>
+                                <p> Breite:</p>
+                                <div class="rangeslider">
+                                <input type="range" min="1" max="100" value="10"
+                                               class="myslider" id="sliderRange1">
+                             
+                              <p> Höhe: </p>
+                                <div class="rangeslider">
+                                <input type="range" min="1" max="100" value="10"
+                                               class="myslider" id="sliderRange2">
+                              </div>
+    <button id="btn1" type="button" value="btn1" > Muster generieren </button>
+    <button id="btn2" type="button" value="btn2"> Bild speichern</button>
+
+  </div>
+    <script src="bundle.js"></script>
+    <script type="module" src="Ballmuster.ts"></script>
 </body>
 
 </html>
