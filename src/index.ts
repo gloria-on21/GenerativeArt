@@ -1,15 +1,6 @@
+import { GetRandomFloat, GetRandomInt, ISimulatable  } from './util';
 
-function GetRandomFloat(min:number, max:number):number{ //Hier werden random Zahlen erzeugt, die die Bewegung der Partikel bestimmen
-  return Math.random() * (max - min ) + min
-}
-function GetRandomInt(min:number, max:number):number{ // Hier werden random Zahlen erzeugt, die von 0 bis zur Bildbreite oder Bildhöhe verlaufen
-return Math.floor(GetRandomFloat(min,max))  
-}
-//Hier werdem die Eigenschaften der Funktionen der Simulation festgelegt
-interface ISimulatable {
-  Update(): void
-  Draw(ctx: CanvasRenderingContext2D):void
-}
+
 
 //ermöglicht Partikel im Bild
 
