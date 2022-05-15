@@ -46,7 +46,6 @@ function main() {
       const updateFrameRate = 60;
       interval = setInterval(() => {
           sim.Update();
-         
           sim.Draw(ctx);
       }, 1000 / updateFrameRate);
   }
